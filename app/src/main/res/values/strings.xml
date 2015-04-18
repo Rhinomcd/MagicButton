@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MagicButton</string>
+    <string name="button_text">Click 4 magickz</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="instructions">Click the magical button below to expierence something awesome!</string>
+</resources>
