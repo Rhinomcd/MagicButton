@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import java.util.Random;
 
+import info.hoang8f.widget.FButton;
+
 
 public class MainActivity extends ActionBarActivity {
     Button button;
@@ -33,14 +35,22 @@ public class MainActivity extends ActionBarActivity {
                 @Override
                 public void onClick(View arg0) {
 
-                    int randomCondition = new Random().nextInt(20);
-                    if (randomCondition <10){
+                    int randomCondition = new Random().nextInt(100);
+                    if (randomCondition < 10){
                         TextView mainText = (TextView) findViewById(R.id.textView);
                         mainText.setText("Case1");
                     }
-                    else{
+                    else if(randomCondition < 20){
                         TextView mainText = (TextView) findViewById(R.id.textView);
                         mainText.setText("Case2");
+                    }
+                    else if (randomCondition < 30){
+                        FButton magicButton = (FButton) findViewById(R.id.button);
+                        magicButton.setButtonColor(getResources().getColor(R.color.fbutton_color_orange));
+                    }
+                    else{
+                        FButton magicButton = (FButton) findViewById(R.id.button);
+                        magicButton.setButtonColor(getResources().getColor(R.color.fbutton_color_turquoise));
                     }
 
                 }
