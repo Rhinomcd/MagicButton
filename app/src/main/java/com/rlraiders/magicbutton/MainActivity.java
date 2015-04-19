@@ -35,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
                 @Override
                 public void onClick(View arg0) {
 
-                    int randomCondition = new Random().nextInt(100);
+                    int randomCondition = new Random().nextInt(50);
                     if (randomCondition < 10){
                         TextView mainText = (TextView) findViewById(R.id.textView);
                         mainText.setText("Case1");
@@ -52,16 +52,14 @@ public class MainActivity extends ActionBarActivity {
                         FButton magicButton = (FButton) findViewById(R.id.button);
                         magicButton.setButtonColor(getResources().getColor(R.color.fbutton_color_turquoise));
                     }
-
                 }
-
             });
         }
-        }
+    }
 
 
 
-        @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -73,13 +71,13 @@ public class MainActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        // int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case 0:
+                startActivity(new Intent(this, ShowSettingsActivity.class));
+                return true;
         }
-
-        return super.onOptionsItemSelected(item);
+        return false;
     }
 }
