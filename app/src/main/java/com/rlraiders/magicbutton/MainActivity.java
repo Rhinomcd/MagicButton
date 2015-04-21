@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -74,8 +75,8 @@ public class MainActivity extends ActionBarActivity {
         // int id = item.getItemId();
 
         switch (item.getItemId()) {
-            case 0:
-                startActivity(new Intent(this, ShowSettingsActivity.class));
+            case R.id.action_settings:
+                startActivity(new Intent(this, SettingsActivity.class));
                 return true;
         }
         return false;
