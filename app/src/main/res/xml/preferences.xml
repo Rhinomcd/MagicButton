@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/pref_all_settings_title"
+        android:key="pref_key_all_settings">
+
+        <ListPreference
+            android:key="random_factor"
+            android:summary="how magick are the things"
+            android:title="Randomization Factor"
+            android:entryValues="@array/random_factor_values"
+            android:defaultValue="1"
+            />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
